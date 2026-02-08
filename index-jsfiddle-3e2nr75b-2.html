@@ -11,6 +11,20 @@
       padding: 0;
       background: #f5f5f5;
       color: #333;
+      .back-home {
+        cursor: pointer;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        background-color: #2c3e50;   /* même couleur que le header */
+        color: #ecf0f1;
+        border: none;
+        border-radius: 4px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .back-home:hover {
+        background-color: #34495e;
+        color: #fff;
+    }
     }
     nav {
         display:flex;
@@ -96,6 +110,9 @@
   <header>
     <h1>Présentation de la première CIEL2</h1>
   </header>
+  <button class="back-home" onclick="location.href='index.html'">
+    ← Retour à l’accueil
+</button>
   <nav>
         <ul class="menu">
             <!-- Premier item avec sous‑menu -->
@@ -172,6 +189,7 @@
   </script>
 </body>
 </html>
+
 
 
 
