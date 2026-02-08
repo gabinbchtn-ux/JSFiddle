@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lycée Félix le Dantec – Infos Bac Pro CIEL</title>
+    <title>Lycée Félix le Dantec – FAQ</title>
 
     <style>
         /* ------------------- GLOBAL ------------------- */
@@ -105,13 +105,121 @@
         h1 { color: #e3e3e3; }
         h2 { color: #00695c; }
         .slide { margin-bottom: 2rem; }
+
+        /* ------------------- FAQ STYLING ------------------- */
+        .faq-section {
+            margin-top: 2rem;
+        }
+        .faq-section h2 {
+            margin-bottom: 1rem;
+            color: #00695c;
+        }
+        details {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+            background: #fafafa;
+        }
+        summary {
+            cursor: pointer;
+            padding: 0.8rem 1rem;
+            font-weight: 600;
+            color: #004d40;
+            background: #e0f2f1;
+            border-radius: 4px;
+            list-style: none;
+            position: relative;
+        }
+        summary::after {
+            content: "▸";
+            position: absolute;
+            right: 1rem;
+            transition: transform 0.2s;
+        }
+        details[open] summary::after {
+            transform: rotate(90deg);
+        }
+        details[open] summary {
+            background: #c8e6c9;
+        }
+        details p {
+            padding: 0.8rem 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ------------------- ASK SECTION (form) ------------------- */
+        .ask-section h2 {
+            margin-top: 2rem;
+            color: #00695c;
+        }
+        .ask-section input,
+        .ask-section textarea {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+        }
+        .ask-section button {
+            background:#2c3e50;
+            color:#fff;
+            padding:0.5rem 1rem;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        .ask-section button:hover {
+            background:#34495e;
+        }
+
+        /* ----- STYLE DES QUESTIONS AJOUTÉES ----- */
+        .question-item {
+            margin-bottom: 0.8rem;
+        }
+        .question-item summary {
+            background:#e0f2f1;
+            padding:0.8rem 1rem;
+            font-weight:600;
+            cursor:pointer;
+            border-radius:4px;
+            position:relative;
+        }
+        .question-item summary::after {
+            content:"▸";
+            position:absolute;
+            right:1rem;
+            transition:transform .2s;
+        }
+        .question-item[open] summary::after {
+            transform:rotate(90deg);
+        }
+        .question-item[open] summary {
+            background:#c8e6c9;
+        }
+        .question-item p {
+            padding:0.8rem 1rem;
+            margin:0;
+            background:#fafafa;
+            border-left:3px solid #009688;
+        }
+        .question-item button.del-btn {
+            margin:0.5rem;
+            background:#c62828;
+            color:#fff;
+            border:none;
+            padding:0.3rem 0.6rem;
+            border-radius:3px;
+            cursor:pointer;
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>faq</h1>
+    <h1>FAQ – Lycée Félix le Dantec</h1>
 </header>
 
 <button class="back-home"
@@ -121,7 +229,7 @@
 
 <nav>
     <ul class="menu">
-        <!-- EMPLois du temps -->
+        <!-- Emploi du temps -->
         <li>
             <a href="#">· Emploi du temps</a>
             <ul class="submenu">
@@ -133,7 +241,7 @@
             </ul>
         </li>
 
-        <!-- SE REPÉRER -->
+        <!-- Se repérer -->
         <li>
             <a href="#">· Se repérer à Dantec</a>
             <ul class="submenu">
@@ -143,7 +251,7 @@
             </ul>
         </li>
 
-        <!-- CONTACT -->
+        <!-- Contact -->
         <li>
             <a href="#contact">· Contact</a>
             <ul class="submenu">
@@ -152,7 +260,7 @@
             </ul>
         </li>
 
-        <!-- RESSOURCES -->
+        <!-- Ressources -->
         <li>
             <a href="#">· Ressources</a>
             <ul class="submenu">
@@ -165,11 +273,13 @@
 </nav>
 
 <main>
+    <!-- ==== SECTION INTRODUCTION ==== -->
     <section class="slide">
         <h2>Introduction</h2>
-        <p>Ceci est une page HTML très simple, elle sert de test pour toute sorte d’expérience et à rassembler des infos.</p>
+        <p>Ceci est une page FAQ du lycée Félix‑Le‑Dantec. Vous y trouverez les réponses aux questions les plus fréquentes concernant la vie scolaire, les démarches administratives, les ressources pédagogiques, etc.</p>
     </section>
 
+    <!-- ==== SECTION CONTENU PRINCIPAL ==== -->
     <section class="slide">
         <h2>Contenu principal</h2>
         <ul>
@@ -179,9 +289,66 @@
         </ul>
     </section>
 
+    <!-- ==== SECTION FAQ ==== -->
+    <section class="faq-section">
+        <h2>Foire aux questions</h2>
+
+        <details>
+            <summary>Comment accéder à mon emploi du temps ?</summary>
+            <p>Connecte‑toi à l’intranet du lycée avec ton identifiant étudiant. Une fois connecté, clique sur « Emploi du temps » dans le menu principal. Tu peux télécharger le PDF ou le visualiser directement en ligne.</p>
+        </details>
+
+        <details>
+            <summary>Où puis‑je récupérer les cours de la semaine ?</summary>
+            <p>Les cours sont disponibles sur le drive du lycée (Google Drive) sous le dossier <em>« Cours / Semaines »</em>. Le lien est partagé dans la rubrique « Ressources » du menu.</p>
+        </details>
+
+        <details>
+            <summary>Qui contacter en cas de problème administratif ?</summary>
+            <p>Le secrétariat du lycée (bureau 01) est joignable du lundi au vendredi de 8 h à 12 h. Tu peux également envoyer un mail à <a href="mailto:secretariat@lycee-ledantec.fr">secretariat@lycee-ledantec.fr</a>.</p>
+        </details>
+
+        <details>
+            <summary>Comment m’inscrire à un stage ou à une alternance ?</summary>
+            <p>Rendez‑vous sur la page <a href="https://lycee-ledantec.fr/stages" target="_blank">Stages & Alternances</a> du site officiel. Tu y trouveras les formulaires à remplir ainsi que les dates limites de dépôt.</p>
+        </details>
+
+        <details>
+            <summary>Quel est le protocole sanitaire actuel ?</summary>
+            <p>Le lycée applique les recommandations du ministère de la Santé : port du masque obligatoire dans les couloirs, désinfection régulière des surfaces et ventilation des salles de classe. Consulte la page <a href="https://lycee-ledantec.fr/protocole-sanitaire" target="_blank">Protocole Sanitaire</a> pour les mises à jour.</p>
+        </details>
+
+        <details>
+            <summary>Où trouver les documents d’orientation (BTS, CAP, etc.) ?</summary>
+            <p>Ils sont regroupés dans le dossier <em>« Orientation »</em> du drive partagé du lycée. Un lien direct figure dans le sous‑menu « Ressources → Documentation ».</p>
+        </details>
+    </section>
+
+    <!-- ==== SECTION POSER UNE QUESTION ==== -->
+    <section class="ask-section">
+        <h2>Poser une question</h2>
+
+        <form id="questionForm">
+            <label for="qTitle">Titre de la question *</label> 
+            <input type="text" id="qTitle" name="qTitle" required
+                   placeholder="Ex. : Comment accéder aux cours en ligne ?">  
+
+            <label for="qBody">Description (facultatif)</label> 
+            <textarea id="qBody" name="qBody"
+                      placeholder="Donne plus de détails si besoin..."
+                      rows="3"></textarea>  
+
+            <button type="submit">➤ Envoyer la question</button>
+        </form>
+
+        <!-- Les questions ajoutées apparaîtront ici -->
+        <div id="questionsList" style="margin-top:2rem;"></div>
+    </section>
+
+    <!-- ==== SECTION CONCLUSION ==== -->
     <section class="slide">
         <h2>Conclusion</h2>
-        <p>Merci de votre attention ! Pour tout renseignement sur le lycée Félix‑Le‑Dantec, vous pouvez consulter le site officiel : <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
+        <p>Merci de votre attention ! Pour tout renseignement supplémentaire, n’hésitez pas à consulter le site officiel du lycée : <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
     </section>
 </main>
 
@@ -190,10 +357,89 @@
 </footer>
 
 <script>
-    // Exemple très simple : afficher la date actuelle dans le pied de page
-    const footer = document.querySelector('footer');
-    const today = new Date().toLocaleDateString('fr-FR');
-    footer.textContent += ` – ${today}`;
+/* -------------------------------------------------------------
+   Gestion des questions (stockage local + affichage)
+   ------------------------------------------------------------- */
+const STORAGE_KEY = 'faq_questions';
+
+// Récupérer les questions depuis le localStorage (ou tableau vide)
+function loadQuestions() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+}
+
+// Sauvegarder le tableau complet
+function saveQuestions(arr) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+}
+
+// Créer le DOM d’une question (accordéon <details>)
+function buildQuestionItem(qObj, index) {
+    const container = document.createElement('details');
+    container.className = 'question-item';
+    container.dataset.idx = index;               // indice pour la suppression
+
+    const summary = document.createElement('summary');
+    summary.textContent = qObj.title;
+    container.appendChild(summary);
+
+    if (qObj.body && qObj.body.trim() !== '') {
+        const p = document.createElement('p');
+        p.textContent = qObj.body;
+        container.appendChild(p);
+    }
+
+    // Bouton suppression (utile pendant le prototypage)
+    const delBtn = document.createElement('button');
+    delBtn.textContent = '🗑️ Supprimer';
+    delBtn.className = 'del-btn';
+    delBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // éviter de fermer le <details>
+        const idx = parseInt(container.dataset.idx, 10);
+        const data = loadQuestions();
+        data.splice(idx, 1);
+        saveQuestions(data);
+        renderQuestions();
+    });
+    container.appendChild(delBtn);
+
+    return container;
+}
+
+// (Re)render de toute la liste de questions
+function renderQuestions() {
+    const listDiv = document.getElementById('questionsList');
+    listDiv.innerHTML = '';
+
+    const data = loadQuestions();
+    data.forEach((q, i) => {
+        listDiv.appendChild(buildQuestionItem(q, i));
+    });
+}
+
+// Gestion du formulaire d’ajout
+document.getElementById('questionForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.getElementById('qTitle').value.trim();
+    const body  = document.getElementById('qBody').value.trim();
+
+    if (!title) return; // titre obligatoire
+
+    const data = loadQuestions();
+    data.unshift({title, body}); // ajout en tête (plus récent en haut)
+    saveQuestions(data);
+
+    e.target.reset(); // nettoyer le formulaire
+    renderQuestions(); // mettre à jour l’affichage
+});
+
+// Au chargement de la page, afficher les questions déjà stockées
+document.addEventListener('DOMContentLoaded', renderQuestions);
+
+// Footer : afficher la date du jour
+const footer = document.querySelector('footer');
+const today = new Date().toLocaleDateString('fr-FR');
+footer.textContent += ` – ${today}`;
 </script>
 
 </body>
