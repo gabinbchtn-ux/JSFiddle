@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Exemple de menu déroulant</title>
+    <title>Lycée Felix-Le-Dantec Formations Pro</title>
     <style>
         /* ----- Styles généraux ----- */
         body { margin:0; font-family:Arial,Helvetica,sans-serif; }
@@ -71,72 +71,52 @@
         }
     </style>
 </head>
-
 <body>
-  <div id="div" class="Page principale de test" data-role="page" style="height:100/100">
-    
-  <header>
-    <h1>Présentation de la première CIEL2</h1>
-  </header>
-  
- 
-    
-  <main>
-    <!-- Slide 1 -->
-    <section class="slide">
-      <h2>Introduction</h2>
-      <p>Ceci est une page HTML très simple, prête à être partagée via github.</p>
-    </section>
 
-    <!-- Slide 2 -->
-    <section class="slide">
-      <h2>Contenu principal</h2>
-      <ul>
-        <li>Point 1: Les axes de la formation</li>
-        <li>Point 2: Les cours présents dans la formation</li>
-        <li>Point 3: Une partie importante, les PFMP</li>
-      </ul>
-    </section>
+<header>
+    <nav>
+        <ul class="menu">
+            <!-- Premier item avec sous‑menu -->
+            <li>
+                <a href="#">Emploi du temps</a>
+                <ul class="submenu">
+                    <li><a href="#lundi">Lundi</a></li>
+                    <li><a href="#mardi">Mardi</a></li>
+                    <li><a href="#mercredi">Mercredi</a></li>
+                </ul>
+            </li>
 
-    <!-- Slide 3 -->
-    <section class="slide">
-      <h2>Conclusion</h2>
-      <p>Merci de votre attention ! Pour tout renseignement sur les Lycée Felix Le Dantec vous pouvez allez sur le site de l'etablissementque voici <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
-    </section>
-  </main>
+            <!-- Deuxième item avec sous‑menu -->
+            <li>
+                <a href="#">Mail</a>
+                <ul class="submenu">
+                    <li><a href="mailto:exemple@domaine.com">Envoyer un mail</a></li>
+                    <li><a href="#boite-reception">Boîte de réception</a></li>
+                    <li><a href="#archives">Archives</a></li>
+                </ul>
+            </li>
 
-  <footer>
-    © 2026 – Bucheton Gabin
-  </footer>
-  </style>
+            <!-- Item sans sous‑menu -->
+            <li><a href="#contact">Contact</a></li>
 
-  
-</head>
-<body>
-  
+            <!-- Autre item avec sous‑menu -->
+            <li>
+                <a href="#">Ressources</a>
+                <ul class="submenu">
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-  <script>
-    <script>
-    // Exemple très simple : afficher la date actuelle dans le pied de page
-    const footer = document.querySelector('footer');
-    const today = new Date().toLocaleDateString('fr-FR');
-    footer.textContent += ` – ${today}`;
-  </script>
-</body>
+<!-- Contenu de page factice -->
+<main style="padding:20px;">
+    <h1>Bienvenue</h1>
+    <p>Ceci est une page d’exemple contenant un menu déroulant simple.</p>
+</main>
 
-</html>
-  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
