@@ -1,184 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lycée Felix le Dantec les Info des Bac Pro CIEL<</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-      .back-home {
-        cursor: pointer;
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-        background-color: #2c3e50;   /* même couleur que le header */
-        color: #ecf0f1;
-        border: none;
-        border-radius: 4px;
-        transition: background 0.2s, color 0.2s;
-    }
-    .back-home:hover {
-        background-color: #34495e;
-        color: #fff;
-    }
-    }
-    nav {
-        display:flex;
-        justify-content:flex-start;
-     }
-    ul.menu {
-            list-style:none;
-            margin:0;
-            padding:0;
-            display:flex;
-    }
-        ul.menu > li {
-            position:relative;
-    }
-        ul.menu > li > a {
-            display:block;
-            padding:15px 20px;
-            color:#09bb4d;
-            text-decoration:none;
-     }
-        ul.menu > li > a:hover {
-            background:#004d40;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lycée Félix le Dantec – Infos Bac Pro CIEL</title>
 
+    <style>
+        /* ------------------- GLOBAL ------------------- */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* ------------------- BUTTON BACK HOME ------------------- */
+        .back-home {
+            cursor: pointer;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            background-color: #2c3e50;   /* même couleur que le header */
+            color: #ecf0f1;
+            border: none;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+            margin: 1rem;
+        }
+        .back-home:hover {
+            background-color: #34495e;
+            color: #fff;
+        }
+
+        /* ------------------- NAVIGATION ------------------- */
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            background: #004d40;
+        }
+        ul.menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        ul.menu > li {
+            position: relative;
+        }
+        ul.menu > li > a {
+            display: block;
+            padding: 15px 20px;
+            color: #09bb4d;
+            text-decoration: none;
+        }
+        ul.menu > li > a:hover {
+            background: #00332b;
+        }
+
+        /* ---------- SUB‑MENU ---------- */
         ul.submenu {
-            display:none;                   
-            position:absolute;
-            top:100%;                         
-            left:0;
-            min-width:180px;
-            background:#004d40;
-            box-shadow:0 2px 5px rgba(0, 0, 0, 0.85);
-            z-index:1000;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            background: #004d40;
+            box-shadow: 0 2px 5px rgba(0,0,0,.85);
+            z-index: 1000;
         }
         ul.submenu li a {
-            display:block;
-            padding:10px 15px;
-            color:#09bb4d;
-            text-decoration:none;
+            display: block;
+            padding: 10px 15px;
+            color: #09bb4d;
+            text-decoration: none;
         }
         ul.submenu li a:hover {
-            background:#004d40;
+            background: #00332b;
         }
-
         /* Afficher le sous‑menu au survol du parent */
         ul.menu > li:hover > ul.submenu {
-            display:block;
+            display: block;
         }
 
-        /* ----- Adaptation mobile (optionnelle) ----- */
+        /* ----- Mobile adaptation ----- */
         @media (max-width:600px) {
-            nav { flex-direction:column; }
-            ul.menu { flex-direction:column; }
-            ul.menu > li { width:100%; }
+            nav { flex-direction: column; }
+            ul.menu { flex-direction: column; }
+            ul.menu > li { width: 100%; }
         }
-    header, footer {
-      background: #004d40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,.1);
-    }
-    h1 {
-      color: #e3e3e3;
-    }
-    h2 {
-      color: #00695c;
-    }
-    .slide {
-      margin-bottom: 2rem;
-    }
-  </style> 
+
+        header, footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,.1);
+        }
+        h1 { color: #e3e3e3; }
+        h2 { color: #00695c; }
+        .slide { margin-bottom: 2rem; }
+    </style>
 </head>
+
 <body>
-  
-  <header>
-    <h1>Les infos et carectiristique des lieux différents</h1>
-  </header>
-  <button class="back-home" onclick="location.href='index-jsfiddle-3e2nr75b-2.html'">
+
+<header>
+    <h1>Planque</h1>
+</header>
+
+<button class="back-home"
+        onclick="location.href='index-jsfiddle-3e2nr75b-2.html'">
     ← Retour à l’accueil
 </button>
-  <nav>
-        <ul class="menu">
-            <li>
-                <a href="#">· Emploi du temps</a>
-                <ul class="submenu">
-                    <li><a href="lundi.html">Lundi</a></li>
-                    <li><a href="mardi.html">Mardi</a></li>
-                    <li><a href="mercredi.html">Mercredi</a></li>
-		    <li><a href="jeudi.html">Jeudi</a></li>
-		    <li><a href="vendredi.html">Vendredi</a></li>
-                </ul>
-            </li>
-              <li><a href="#">· Se repérer à Dantec</a>
-                  <ul class="submenu">
-                      <li><a href="batiments.html">Carte des batiments</a></li>
-                      <li><a href="planque.html">Les infos et carectiristique des lieux différents</a></li>
-                      <li><a href="méta.html">Etre efficaces quand on est à Dantec</a></li>
-                  </ul>
-            </li>
-            <li><a href="#contact">· Contact</a>
-                  <ul class="submenu">
-                      <li><a href="a-voir.html">a voir</a></li>
-                      <li><a href="direction-contacts.html">Les contacts des differents services de l'etablisement</a></li>
-            </li>
-            <li><a href="#">· Ressources</a>
-                <ul class="submenu">
-                    <li><a href="resources-documentation.html">Documentation</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="support.html">Support du site</a></li>
-                </ul>
-            </li>
+
+<nav>
+    <ul class="menu">
+        <!-- EMPLois du temps -->
+        <li>
+            <a href="#">· Emploi du temps</a>
+            <ul class="submenu">
+                <li><a href="lundi.html">Lundi</a></li>
+                <li><a href="mardi.html">Mardi</a></li>
+                <li><a href="mercredi.html">Mercredi</a></li>
+                <li><a href="jeudi.html">Jeudi</a></li>
+                <li><a href="vendredi.html">Vendredi</a></li>
+            </ul>
+        </li>
+
+        <!-- SE REPÉRER -->
+        <li>
+            <a href="#">· Se repérer à Dantec</a>
+            <ul class="submenu">
+                <li><a href="batiments.html">Carte des bâtiments</a></li>
+                <li><a href="planque.html">Infos & caractéristiques des lieux</a></li>
+                <li><a href="meta.html">Être efficace à Dantec</a></li>
+            </ul>
+        </li>
+
+        <!-- CONTACT -->
+        <li>
+            <a href="#contact">· Contact</a>
+            <ul class="submenu">
+                <li><a href="a-voir.html">À voir</a></li>
+                <li><a href="direction-contacts.html">Contacts des services</a></li>
+            </ul>
+        </li>
+
+        <!-- RESSOURCES -->
+        <li>
+            <a href="#">· Ressources</a>
+            <ul class="submenu">
+                <li><a href="resources-documentation.html">Documentation</a></li>
+                <li><a href="base-des-page.html">FAQ</a></li>
+                <li><a href="base-des-page.html">Support du site</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <section class="slide">
+        <h2>Introduction</h2>
+        <p>Ceci est une page HTML très simple, elle sert de test pour toute sorte d’expérience et à rassembler des infos.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Contenu principal</h2>
+        <ul>
+            <li>Point 1 : La nourriture au self</li>
+            <li>Point 2 : Les pauses, l'optimisation du temps et des déplacements</li>
+            <li>Point 3 : Comment s'aider à trouver des stages dans un contexte compliqué</li>
         </ul>
-    </nav>
-  <main>
-    <section class="slide">
-      <h2>Introduction</h2>
-      <p>Ceci est une page HTML très simple, elle sert de test pour toute sorte expèrience et à renségner des infos.</p>
     </section>
+
     <section class="slide">
-      <h2>Contenu principal</h2>
-      <ul>
-        <li>Point 1: La nourriture au self</li>
-        <li>Point 2: Les pauses, l'optimisation du temps et des déplacements </li>
-        <li>Point 3: Comment s'aider à trouver des stages dnas un contexte compliqué</li>
-      </ul>
+        <h2>Conclusion</h2>
+        <p>Merci de votre attention ! Pour tout renseignement sur le lycée Félix‑Le‑Dantec, vous pouvez consulter le site officiel : <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
     </section>
-    <section class="slide">
-      <h2>Conclusion</h2>
-      <p>Merci de votre attention ! Pour tout renseignement sur les Lycée Felix Le Dantec 
-        vous pouvez allez sur le site de l'etablissementque, voici <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
-    </section>
-  </main>
-  <footer>
-    © 2026 – Bucheton Gabin - Actuellement en Premières CIEL 2
-  </footer>
-  </style>
-</head>
-<body>
-  <script>
-    <script>
+</main>
+
+<footer>
+    © 2026 – Gabin Bucheton – Actuellement en Première CIEL 2
+</footer>
+
+<script>
     // Exemple très simple : afficher la date actuelle dans le pied de page
     const footer = document.querySelector('footer');
     const today = new Date().toLocaleDateString('fr-FR');
     footer.textContent += ` – ${today}`;
-  </script>
-</body>
-</html>
-  </script>
+</script>
+
 </body>
 </html>

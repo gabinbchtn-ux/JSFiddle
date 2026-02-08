@@ -190,8 +190,11 @@
 </footer>
 
 <script>
-    // Exemple très simple : afficher la date actuelle dans l
+    // Exemple très simple : afficher la date actuelle dans le pied de page
+    const footer = document.querySelector('footer');
+    const today = new Date().toLocaleDateString('fr-FR');
+    footer.textContent += ` – ${today}`;
+</script>
 
-
-
-
+</body>
+</html>
