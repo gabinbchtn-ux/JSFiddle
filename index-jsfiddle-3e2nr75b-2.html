@@ -1,205 +1,135 @@
 <!DOCTYPE html>
-
 <html>
-
-
-
-<html>
-
 <head>
-
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Lycée Felix le Dantec présentation du Bac Pro CIEL<</title>
-
-
-
   <style>
-
     <style>
-
     body {
-
       font-family: Arial, Helvetica, sans-serif;
-
       margin: 0;
-
       padding: 0;
-
       background: #f5f5f5;
-
       color: #333;
-
     }
+    ul.menu {
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+        }
+        ul.menu > li {
+            position:relative;               /* nécessaire pour le sous‑menu */
+        }
+        ul.menu > li > a {
+            display:block;
+            padding:15px 20px;
+            color:#ecf0f1;
+            text-decoration:none;
+        }
+        ul.menu > li > a:hover {
+            background:#34495e;
+        }
 
+        /* ----- Sous‑menu (déroulé) ----- */
+        ul.submenu {
+            display:none;                    /* caché par défaut */
+            position:absolute;
+            top:100%;                         /* juste sous le parent */
+            left:0;
+            min-width:180px;
+            background:#34495e;
+            box-shadow:0 2px 5px rgba(0,0,0,.3);
+            z-index:1000;
+        }
+        ul.submenu li a {
+            display:block;
+            padding:10px 15px;
+            color:#ecf0f1;
+            text-decoration:none;
+        }
+        ul.submenu li a:hover {
+            background:#3d566e;
+        }
+
+        /* Afficher le sous‑menu au survol du parent */
+        ul.menu > li:hover > ul.submenu {
+            display:block;
+        }
+
+        /* ----- Adaptation mobile (optionnelle) ----- */
+        @media (max-width:600px) {
+            nav { flex-direction:column; }
+            ul.menu { flex-direction:column; }
+            ul.menu > li { width:100%; }
+        }
     header, footer {
-
       background: #004d40;
-
       color: white;
-
       text-align: center;
-
       padding: 1rem;
-
     }
-
     main {
-
       max-width: 800px;
-
       margin: 2rem auto;
-
       background: white;
-
       padding: 2rem;
-
       box-shadow: 0 2px 8px rgba(0,0,0,.1);
-
     }
-
     h1 {
-
       color: #e3e3e3;
-
     }
-
     h2 {
-
       color: #00695c;
-
     }
-
     .slide {
-
       margin-bottom: 2rem;
-
     }
-
   </style>
-
 </head>
-
-
-
 <body>
-
-
   <div id="div" class="Page principale de test" data-role="page" style="height:100/100">
-
-
-    
-
   <header>
-
     <h1>Présentation de la première CIEL2</h1>
-
   </header>
-
-
-
-
   <div id="div" class="Page principale de test" data-role="page" style="height:100/100">
-
-
- 
-
-
-
   <main>
-
     <!-- Slide 1 -->
-
     <section class="slide">
-
       <h2>Introduction</h2>
-
       <p>Ceci est une page HTML très simple, prête à être partagée via github.</p>
-
     </section>
-
-
-
     <!-- Slide 2 -->
-
     <section class="slide">
-
       <h2>Contenu principal</h2>
-
       <ul>
-
         <li>Point 1: Les axes de la formation</li>
-
         <li>Point 2: Les cours présents dans la formation</li>
-
         <li>Point 3: Une partie importante, les PFMP</li>
-
       </ul>
-
     </section>
-
-
-
     <!-- Slide 3 -->
-
     <section class="slide">
-
       <h2>Conclusion</h2>
-
       <p>Merci de votre attention ! Pour tout renseignement sur les Lycée Felix Le Dantec vous pouvez allez sur le site de l'etablissementque voici <a href="https://lycee-ledantec.fr/carte-des-formations/" target="_blank">la carte des formations</a>.</p>
-
     </section>
-
   </main>
-
-
-
   <footer>
-
     © 2026 – Bucheton Gabin
-
   </footer>
-
   </style>
-
-
-
-
-
 </head>
-
 <body>
-
-
-
-
-
   <script>
-
     <script>
-
     // Exemple très simple : afficher la date actuelle dans le pied de page
-
     const footer = document.querySelector('footer');
-
     const today = new Date().toLocaleDateString('fr-FR');
-
     footer.textContent += ` – ${today}`;
-
   </script>
-
 </body>
-
-
-
 </html>
-
   </script>
-
 </body>
-
 </html>
-
-
