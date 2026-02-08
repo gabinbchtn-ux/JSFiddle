@@ -13,24 +13,28 @@
       background: #f5f5f5;
       color: #333;
     }
+    nav {
+        display:flex;
+        justify-content:flex-start;
+     }
     ul.menu {
             list-style:none;
             margin:0;
             padding:0;
             display:flex;
-        }
+    }
         ul.menu > li {
             position:relative;               /* nécessaire pour le sous‑menu */
-        }
+    }
         ul.menu > li > a {
             display:block;
             padding:15px 20px;
             color:#ecf0f1;
             text-decoration:none;
-        }
+     }
         ul.menu > li > a:hover {
             background:#34495e;
-        }
+    }
 
         /* ----- Sous‑menu (déroulé) ----- */
         ul.submenu {
@@ -89,7 +93,42 @@
   </style>
 </head>
 <body>
-  <div id="div" class="Page principale de test" data-role="page" style="height:100/100">
+  <nav>
+        <ul class="menu">
+            <!-- Premier item avec sous‑menu -->
+            <li>
+                <a href="#">Emploi du temps</a>
+                <ul class="submenu">
+                    <li><a href="#lundi">Lundi</a></li>
+                    <li><a href="#mardi">Mardi</a></li>
+                    <li><a href="#mercredi">Mercredi</a></li>
+                </ul>
+            </li>
+
+            <!-- Deuxième item avec sous‑menu -->
+            <li>
+                <a href="#">Mail</a>
+                <ul class="submenu">
+                    <li><a href="mailto:exemple@domaine.com">Envoyer un mail</a></li>
+                    <li><a href="#boite-reception">Boîte de réception</a></li>
+                    <li><a href="#archives">Archives</a></li>
+                </ul>
+            </li>
+
+            <!-- Item sans sous‑menu -->
+            <li><a href="#contact">Contact</a></li>
+
+            <!-- Autre item avec sous‑menu -->
+            <li>
+                <a href="#">Ressources</a>
+                <ul class="submenu">
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
   <header>
     <h1>Présentation de la première CIEL2</h1>
   </header>
@@ -133,3 +172,4 @@
   </script>
 </body>
 </html>
+
