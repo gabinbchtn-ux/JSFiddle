@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html>
-
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lycée Felix le Dantec présentation du Bac Pro CIEL<</title>
-
-  <style>
+    <meta charset="UTF-8">
+    <title>Exemple de menu déroulant</title>
     <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header, footer {
-      background: #004d40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,.1);
-    }
-    h1 {
-      color: #e3e3e3;
-    }
-    h2 {
-      color: #00695c;
-    }
-    .slide {
-      margin-bottom: 2rem;
-    }
-  </style>
+        /* ----- Styles généraux ----- */
+        body { margin:0; font-family:Arial,Helvetica,sans-serif; }
+
+        /* ----- En‑tête et barre de navigation ----- */
+        header {
+            background-color:#2c3e50;          /* couleur sombre */
+            padding:0 20px;
+        }
+        nav {
+            display:flex;
+            justify-content:flex-start;
+        }
+
+        /* ----- Menu principal ----- */
+        ul.menu {
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:flex;
+        }
+        ul.menu > li {
+            position:relative;               /* nécessaire pour le sous‑menu */
+        }
+        ul.menu > li > a {
+            display:block;
+            padding:15px 20px;
+            color:#ecf0f1;
+            text-decoration:none;
+        }
+        ul.menu > li > a:hover {
+            background:#34495e;
+        }
+
+        /* ----- Sous‑menu (déroulé) ----- */
+        ul.submenu {
+            display:none;                    /* caché par défaut */
+            position:absolute;
+            top:100%;                         /* juste sous le parent */
+            left:0;
+            min-width:180px;
+            background:#34495e;
+            box-shadow:0 2px 5px rgba(0,0,0,.3);
+            z-index:1000;
+        }
+        ul.submenu li a {
+            display:block;
+            padding:10px 15px;
+            color:#ecf0f1;
+            text-decoration:none;
+        }
+        ul.submenu li a:hover {
+            background:#3d566e;
+        }
+
+        /* Afficher le sous‑menu au survol du parent */
+        ul.menu > li:hover > ul.submenu {
+            display:block;
+        }
+
+        /* ----- Adaptation mobile (optionnelle) ----- */
+        @media (max-width:600px) {
+            nav { flex-direction:column; }
+            ul.menu { flex-direction:column; }
+            ul.menu > li { width:100%; }
+        }
+    </style>
 </head>
 
 <body>
@@ -97,6 +128,7 @@
   </script>
 </body>
 </html>
+
 
 
 
